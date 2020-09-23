@@ -1,4 +1,6 @@
+const fs = require("fs");
 const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
 const questions = [
@@ -12,6 +14,7 @@ const questions = [
   "How did you test your project?",
   "Please provide Instructions on how to use your project.",
 ];
+console.log(questions);
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -26,49 +29,49 @@ function init() {
     {
       type: "input",
       name: "title",
-      message: "questions[0]",
+      message: questions[0],
       default: "Default Title",
     },
     {
       type: "input",
       name: "description",
-      message: "questions[1]",
+      message: questions[1],
       default: "Default Description",
     },
     {
       type: "input",
       name: "Install",
-      message: "questions[3]",
+      message: questions[3],
       default: "Default Install",
     },
     {
       type: "input",
       name: "usage",
-      message: "questions[4]",
+      message: questions[4],
       default: "Default usage",
     },
     {
       type: "input",
       name: "licencing",
-      message: "questions[5]",
+      message: questions[5],
       default: "Default Licencing",
     },
     {
       type: "input",
       name: "contributors",
-      message: "questions[6]",
+      message: questions[6],
       default: "Default Contributors",
     },
     {
       type: "input",
       name: "test",
-      message: "questions[7]",
+      message: questions[7],
       default: "Default Test",
     },
     {
       type: "input",
       name: "instructions",
-      message: "questions[0]",
+      message: questions[0],
       default: "Default Instructions",
     },
   ]);
