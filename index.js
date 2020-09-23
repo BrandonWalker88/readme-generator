@@ -13,6 +13,8 @@ const questions = [
   "Who all has contributed to your project?",
   "How did you test your project?",
   "Please provide Instructions on how to use your project.",
+  "What is your GitHub username",
+  "What is your Email",
 ];
 console.log(questions);
 
@@ -71,8 +73,20 @@ function init() {
     {
       type: "input",
       name: "instructions",
-      message: questions[0],
+      message: questions[8],
       default: "Default Instructions",
+    },
+    {
+      type: "input",
+      name: "username",
+      message: questions[9],
+      default: "Default username",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: questions[10],
+      default: "Default Email",
     },
   ]);
 }

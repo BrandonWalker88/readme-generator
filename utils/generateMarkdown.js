@@ -16,6 +16,10 @@ function generateMarkdown(data) {
 
   ## Contributing
   ${data.contributing}
+
+  ## Questions
+  Questions regarding this project:
+  GitHub profile: https://github.com/${data.username}
 `;
 }
 
